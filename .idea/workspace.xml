@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2752cbb-82ef-47b6-94ee-04a4c5a42f97" name="Changes" comment="workspace update">
-      <change afterPath="$PROJECT_DIR$/src/bench/MemoryEaterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logging/ConsoleLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timing/TimeConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timing/Timer.java" afterDir="false" />
+    <list default="true" id="a2752cbb-82ef-47b6-94ee-04a4c5a42f97" name="Changes" comment="so this code gives the memory detail of the pc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bench/IBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bench/IBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logging/ILog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logging/ILog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testbench/MainBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testbench/MainBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timing/ITimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/timing/ITimer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +21,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NvETn2Fv372GzdFjK6uBT41caM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,18 +37,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,10 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680536169698</updated>
-      <workItem from="1680536170708" duration="3011000" />
-      <workItem from="1680539651851" duration="266000" />
-      <workItem from="1680539937459" duration="1580000" />
-      <workItem from="1680541696635" duration="24000" />
+      <workItem from="1680536170708" duration="411000" />
     </task>
     <task id="LOCAL-00001" summary="Created IntelliJ project. Added first packages and interfaces">
       <created>1680536468889</created>
@@ -76,12 +67,12 @@
       <option name="project" value="LOCAL" />
       <updated>1680536468889</updated>
     </task>
-    <task id="LOCAL-00002" summary="workspace update">
-      <created>1680536655349</created>
+    <task id="LOCAL-00002" summary="so this code gives the memory detail of the pc.">
+      <created>1681974271355</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1680536655349</updated>
+      <updated>1681974271355</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -102,7 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created IntelliJ project. Added first packages and interfaces" />
-    <MESSAGE value="workspace update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace update" />
+    <MESSAGE value="so this code gives the memory detail of the pc." />
+    <option name="LAST_COMMIT_MESSAGE" value="so this code gives the memory detail of the pc." />
   </component>
 </project>
