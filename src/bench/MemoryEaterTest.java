@@ -7,11 +7,50 @@ import java.util.Vector;
 
 
 public class MemoryEaterTest implements IBenchmark{
+
+    /*
+
+public class MemoryEater
+{
+  public static void main(String[] args)
+  {
+    Vector v = new Vector();
+    while (true)
+    {
+      byte b[] = new byte[1048576];
+      v.add(b);
+      Runtime rt = Runtime.getRuntime();
+      System.out.println( "free memory: " + rt.freeMemory() );
+    }
+  }
+}*/
+    static int count = 0;
     public void run(){
 
+        Vector v = new Vector();
+
+        while (true) {
+            try {
+                count++;
+                byte b[] = new byte[4*1048576];
+                v.add(b);
+
+            } catch(OutOfMemoryError e){
+                try{
+                    System.out.println("\nProgram has reached "+ count + " iterations");
+                } catch(OutOfMemoryError f){
+                    ;
+                }
+                break;
+            }
+        }
     }
 
-    public void run(Object ... params){
+    public int getIterations(){
+        return count;
+    }
+
+    public void run(Object ... params) {
 
     }
 
