@@ -8,22 +8,6 @@ import java.util.Vector;
 
 public class MemoryEaterTest implements IBenchmark{
 
-    /*
-
-public class MemoryEater
-{
-  public static void main(String[] args)
-  {
-    Vector v = new Vector();
-    while (true)
-    {
-      byte b[] = new byte[1048576];
-      v.add(b);
-      Runtime rt = Runtime.getRuntime();
-      System.out.println( "free memory: " + rt.freeMemory() );
-    }
-  }
-}*/
     static int count = 0;
     public void run(){
 
