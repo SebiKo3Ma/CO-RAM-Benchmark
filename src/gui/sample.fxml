@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="511.0" prefWidth="748.0" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller">
+   <children>
+      <Button layoutX="374.0" layoutY="202.0" mnemonicParsing="false" onMousePressed="#buttonDetails" prefHeight="106.0" prefWidth="106.0" stylesheets="@../assets/style.css">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button2" />
+         </styleClass></Button>
+      <Button layoutX="374.0" layoutY="342.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="106.0" stylesheets="@../assets/style.css">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button3" />
+         </styleClass></Button>
+      <ImageView fitHeight="431.0" fitWidth="286.0" layoutX="43.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <image>
+            <Image url="@../assets/pozaFundal.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="470.0" layoutY="92.0" prefHeight="49.0" prefWidth="194.0" styleClass="pane" stylesheets="@../assets/style.css" />
+      <Button layoutX="374.0" layoutY="66.0" maxHeight="218.0" maxWidth="302.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="106.0" stylesheets="@../assets/style.css" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button1" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

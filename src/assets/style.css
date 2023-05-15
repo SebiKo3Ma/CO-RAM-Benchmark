@@ -1,0 +1,29 @@
+.button{
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+}
+
+.button1{
+    -fx-background-image: url(buton1.jpg);
+}
+
+.button2{
+    -fx-background-image: url(buton2.jpg);
+}
+
+.button3{
+    -fx-background-image: url(buton3.jpg);
+}
+
+.background{
+    -fx-background-color: linear-gradient(to top right, #ff8b6b, #f7bda4);
+}
+
+.sidePhoto{
+    -fx-border-radius: 100px;
+}
+
+.pane{
+    -fx-background-color: #ffffff;
+
+}
