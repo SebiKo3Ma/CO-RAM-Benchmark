@@ -1,10 +1,16 @@
 .button{
     -fx-background-repeat: no-repeat;
     -fx-background-size: contain;
+
 }
+
+
 
 .button1{
     -fx-background-image: url(buton1.jpg);
+    -fx-background-radius: 1300px;
+    -fx-background-clip: round;
+
 }
 
 .button2{
@@ -16,7 +22,10 @@
 }
 
 .background{
-    -fx-background-color: linear-gradient(to top right, #ff8b6b, #f7bda4);
+    -fx-background-image: url(backgroundCoffe.jpg);
+   /* -fx-effect: blur(radius 1000px);*/
+ -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+
 }
 
 .sidePhoto{
@@ -24,6 +33,6 @@
 }
 
 .pane{
-    -fx-background-color: #ffffff;
+    -fx-background-color: #ffd182;
 
 }
