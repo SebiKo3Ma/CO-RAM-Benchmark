@@ -21,8 +21,12 @@ public class MainBenchmark {
 
         log.write("Finished in ", newTime.convert(time, "miliseconds"), " ms\n");
 
+
+
         log.close();
         bench.clean();
+
+
     }
 }
 //modific sa vad si io ca mere prob not
