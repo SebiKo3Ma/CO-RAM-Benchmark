@@ -1,5 +1,9 @@
 package bench;
 import java.util.Random;
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryUsage;
+import java.lang.management.OperatingSystemMXBean;
 
 public class SmallStress implements IBenchmark{
     int size;
@@ -15,20 +19,26 @@ public class SmallStress implements IBenchmark{
         double size = (Double)options[0];
         int sum = 0;
 
+        System.out.println("initial mem used: " + Runtime.getRuntime().freeMemory() / (1024 * 1024) + " MB");
+        long initialFreeMemory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+
         Random random = new Random();
-        byte[] array = new byte[100000];
+        byte[] array = new byte[400000];
 
         while (size > 0) {
             random.nextBytes(array);
-            size--;
             for (byte b : array) {
                 sum += b;
             }
+            size--;
         }
-        System.out.println("total : " +  Runtime.getRuntime().totalMemory() + "\n");
-        System.out.println("free : " +  Runtime.getRuntime().freeMemory() + "\n");
-        long memoryUsed = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        System.out.println("Total memory used: " + memoryUsed + " bytes");
+        long finalFreeMemory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+
+        // Calculate memory used by the program
+        long memoryUsed = initialFreeMemory - finalFreeMemory;
+        System.out.println("final mem used: " + Runtime.getRuntime().freeMemory() / (1024 * 1024) + " MB");
+
+        System.out.println("Total memory used: " + memoryUsed + " MB");
     }
     public void clean(){
 
