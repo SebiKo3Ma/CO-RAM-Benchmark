@@ -19,6 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import recordKeeping.History;
+import recordKeeping.fileReader;
 
 import java.io.IOException;
 
@@ -57,14 +58,14 @@ public class HistoryController implements Initializable{
         memoryUsed.setCellValueFactory(new PropertyValueFactory<>("memoryUsed"));
         runtime.setCellValueFactory(new PropertyValueFactory<>("runtime"));
         score.setCellValueFactory(new PropertyValueFactory<>("score"));
+
         //add your data to the table here.
-        tbData.setItems(History);
+        fileReader reader = new fileReader();
+        reader.read();
+        tbData.setItems(reader.getList());
     }
 
     // add your data here from any source 
-    private ObservableList<History> History = FXCollections.observableArrayList(
-            new History("00:00", "200MB", "2s", "1000"),
-            new History("00:01", "201MB", "3s", "1001")
-            );
+    private ObservableList<History> History = FXCollections.observableArrayList();
 
 }
