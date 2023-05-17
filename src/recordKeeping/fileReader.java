@@ -11,8 +11,8 @@ public class fileReader {
 
     private String path, timestamp, memory, runtime, score;
     ObservableList<History> dataList = FXCollections.observableArrayList();
-    public void read() {
-        path = "smallStress";
+    public void read(Object ... params) {
+        path = (String)params[0];
         String file = System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles/" + path + ".txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {

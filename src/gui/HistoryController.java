@@ -50,6 +50,20 @@ public class HistoryController implements Initializable{
     @FXML
     public TableColumn<History, String> score;
 
+    @FXML
+    private TableView<History> tbData1;
+    @FXML
+    public TableColumn<History, String> timestamp1;
+
+    @FXML
+    public TableColumn<History, String> memoryUsed1;
+
+    @FXML
+    public TableColumn<History, String> runtime1;
+
+    @FXML
+    public TableColumn<History, String> score1;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -61,8 +75,18 @@ public class HistoryController implements Initializable{
 
         //add your data to the table here.
         fileReader reader = new fileReader();
-        reader.read();
+        reader.read("smallStress");
         tbData.setItems(reader.getList());
+
+
+        timestamp1.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
+        memoryUsed1.setCellValueFactory(new PropertyValueFactory<>("memoryUsed"));
+        runtime1.setCellValueFactory(new PropertyValueFactory<>("runtime"));
+        score1.setCellValueFactory(new PropertyValueFactory<>("score"));
+
+        fileReader reader1 = new fileReader();
+        reader1.read("memoryEater");
+        tbData1.setItems(reader1.getList());
     }
 
     // add your data here from any source 
