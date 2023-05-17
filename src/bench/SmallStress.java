@@ -7,7 +7,7 @@ import java.lang.management.OperatingSystemMXBean;
 
 
 public class SmallStress implements IBenchmark{
-    long iterations;
+    long iterations, UsedMemory;
     int byteArray;
 
     public void initialize(Object...options){
@@ -40,11 +40,15 @@ public class SmallStress implements IBenchmark{
         }
 
         MemoryUsage MemoryUsage = memoryBean.getHeapMemoryUsage();
-        long UsedMemory = MemoryUsage.getUsed()/ (1024 * 1024);
+        UsedMemory = MemoryUsage.getUsed()/ (1024 * 1024);
         System.out.println("Memory used for running the program: " + UsedMemory + " MB");
 
         System.gc();
 
+    }
+
+    public long getMemory(){
+        return UsedMemory;
     }
     public void clean(){
         System.gc();
