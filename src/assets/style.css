@@ -22,10 +22,10 @@
 }
 
 .background{
-    -fx-background-image: url(backgroundCoffe.jpg);
-    -fx-background-size: contain;
+    -fx-background-image: url(background.jpg);
+    -fx-background-size: cover;
    /* -fx-effect: blur(radius 1000px);*/
- -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 
 }
 
