@@ -6,7 +6,7 @@ import timing.ITimer;
 import timing.TimeConvert;
 import timing.Timer;
 import logging.ConsoleLogger;
-import bench.ScoreWriter;
+import recordKeeping.ScoreWriter;
 
 public class TestSmallStress {
     public static void main (String [] args){
@@ -28,7 +28,7 @@ public class TestSmallStress {
         log.write("Score: " + score/100000);
         log.write ("Time: " + newTime.convert(finishedTime, "seconds") + " seconds");
 
-        writer.initialize((int) score/100000);
+        writer.initialize("smallStress", (int)((SmallStress) bench).getMemory(), (int) newTime.convert(finishedTime, "seconds"), (int) score/100000);
         writer.run();
 
         log.close();

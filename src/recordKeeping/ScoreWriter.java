@@ -1,15 +1,28 @@
-package bench;
+package recordKeeping;
+
+import bench.IBenchmark;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
-public class ScoreWriter implements IBenchmark{
-    private int Score;
+public class ScoreWriter implements IBenchmark {
+    private int Score, runtime, memory;
+    private String path;
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Override
-    public void initialize(Object ... params){ this.Score = (Integer)params[0]; }
+    public void initialize(Object ... params){
+        this.path = (String)params[0];
+        this.memory = (Integer)params[1];
+        this.runtime = (Integer)params[2];
+        this.Score = (Integer)params[3];
+    }
 
     @Override
     public void run(){
@@ -17,9 +30,15 @@ public class ScoreWriter implements IBenchmark{
         File file = view.getHomeDirectory();
         String desktopPath = file.getPath();*/
 
-        String filePath = System.getProperty("user.home") + "/Desktop/Scores.txt";
+        String filePath = System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles/" + path + ".txt";
         //System.out.println(filePath);
         //"C:\\Users\\alexa\\Desktop\\Scores.txt  + File.separator + ";
+        try {
+            Files.createDirectories(Paths.get(System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         File file = new File(filePath);
         if(file.exists()){
             ;
@@ -40,7 +59,8 @@ public class ScoreWriter implements IBenchmark{
         try{
             FileWriter fileWriter = new FileWriter(filePath,true);
             //System.out.println("Score:" + Score);
-            fileWriter.write("Score: " + Score + "\n");
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            fileWriter.write(sdf.format(timestamp) + "," + memory + "," + runtime + "," + Score + "\n");
             System.out.println("Successfully wrote in the file.");
             fileWriter.flush();
             fileWriter.close();
