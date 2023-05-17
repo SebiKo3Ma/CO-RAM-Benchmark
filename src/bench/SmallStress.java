@@ -5,9 +5,10 @@ import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
 import java.lang.management.OperatingSystemMXBean;
 
+
 public class SmallStress implements IBenchmark{
-    int size;
-    boolean flag = true;
+    long iterations;
+    int byteArray;
 
     public void initialize(Object...options){
 
@@ -16,32 +17,37 @@ public class SmallStress implements IBenchmark{
 
     }
     public void run(Object...options) {
-        double size = (Double)options[0];
+        System.gc();
+        iterations = (long)options[0];
+        byteArray = (int)options[1];
         int sum = 0;
 
-        System.out.println("initial mem used: " + Runtime.getRuntime().freeMemory() / (1024 * 1024) + " MB");
-        long initialFreeMemory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
+        MemoryMXBean memoryBean = ManagementFactory.getMemoryMXBean();
+        MemoryUsage initialMemoryUsage = memoryBean.getHeapMemoryUsage();
+        long initialMemory = initialMemoryUsage.getMax()/( 1024 * 1024);
+        System.out.println ("Initial allocated memory: " + initialMemory + " MB");
 
         Random random = new Random();
-        byte[] array = new byte[400000];
+        byte[] array = new byte[byteArray];
 
-        while (size > 0) {
+        while (iterations > 0) {
             random.nextBytes(array);
             for (byte b : array) {
                 sum += b;
+
             }
-            size--;
+            iterations--;
         }
-        long finalFreeMemory = Runtime.getRuntime().freeMemory() / (1024 * 1024);
 
-        // Calculate memory used by the program
-        long memoryUsed = initialFreeMemory - finalFreeMemory;
-        System.out.println("final mem used: " + Runtime.getRuntime().freeMemory() / (1024 * 1024) + " MB");
+        MemoryUsage MemoryUsage = memoryBean.getHeapMemoryUsage();
+        long UsedMemory = MemoryUsage.getUsed()/ (1024 * 1024);
+        System.out.println("Memory used for running the program: " + UsedMemory + " MB");
 
-        System.out.println("Total memory used: " + memoryUsed + " MB");
+        System.gc();
+
     }
     public void clean(){
-
+        System.gc();
     }
 
     public void cancel(){
