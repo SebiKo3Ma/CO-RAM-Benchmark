@@ -8,7 +8,7 @@ import timing.Timer;
 import timing.TimeConvert;
 import bench.IBenchmark;
 import bench.MemoryEaterTest;
-import bench.ScoreWriter;
+import recordKeeping.ScoreWriter;
 
 public class MemoryEaterBenchmark {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class MemoryEaterBenchmark {
 
         log.write("Score: " + (int) Score/100000);
 
-        writer.initialize((int) Score/100000);
+        writer.initialize("memoryEater", count, (int) newTime.convert(time, "seconds"), (int) Score/100000);
         writer.run();
 
         log.close();
