@@ -17,7 +17,7 @@ public class ScoreWriter implements IBenchmark{
         File file = view.getHomeDirectory();
         String desktopPath = file.getPath();*/
 
-        String filePath = System.getProperty("user.home") + "/Desktop/Scores.txt";
+        String filePath = System.getProperty("user.home") + "/Scores.txt";
         //System.out.println(filePath);
         //"C:\\Users\\alexa\\Desktop\\Scores.txt  + File.separator + ";
         File file = new File(filePath);
