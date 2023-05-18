@@ -27,7 +27,6 @@ public class MemoryEaterBenchmark {
         int count = ((MemoryEaterTest) bench).getIterations();
         double Score = (count / newTime.convert(time, "seconds")) * 4*1048576;
 
-        log.write("Score: " + (int) Score/100000);
 
         writer.initialize("memoryEater", count, (int) newTime.convert(time, "seconds"), (int) Score/100000);
         writer.run();

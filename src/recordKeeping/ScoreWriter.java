@@ -26,13 +26,9 @@ public class ScoreWriter implements IBenchmark {
 
     @Override
     public void run(){
-        /*FileSystemView view = FileSystemView.getFileSystemView();
-        File file = view.getHomeDirectory();
-        String desktopPath = file.getPath();*/
 
         String filePath = System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles/" + path + ".txt";
-        //System.out.println(filePath);
-        //"C:\\Users\\alexa\\Desktop\\Scores.txt  + File.separator + ";
+
         try {
             Files.createDirectories(Paths.get(System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles"));
         } catch (IOException e) {
@@ -58,7 +54,7 @@ public class ScoreWriter implements IBenchmark {
         }
         try{
             FileWriter fileWriter = new FileWriter(filePath,true);
-            //System.out.println("Score:" + Score);
+
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             fileWriter.write(sdf.format(timestamp) + "," + memory + "," + runtime + "," + Score + "\n");
             System.out.println("Successfully wrote in the file.");

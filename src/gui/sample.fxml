@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="525.0" prefWidth="758.0" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller">
+   <children>
+      <Pane layoutX="512.0" layoutY="103.0" prefHeight="54.0" prefWidth="178.0" styleClass="pane" stylesheets="@../assets/style.css">
+         <children>
+            <Text layoutX="6.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testează-ti cafeluta" textAlignment="CENTER" wrappingWidth="166.400146484375">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <InnerShadow height="46.74" radius="27.305" width="64.48" />
+         </effect></Pane>
+      <Button layoutX="416.0" layoutY="82.0" maxHeight="218.0" maxWidth="347.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="96.0" prefWidth="96.0" stylesheets="@../assets/style.css" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button1" />
+         </styleClass>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="22.17" radius="11.46" width="25.67">
+               <input>
+                  <InnerShadow choke="0.22" height="93.79" radius="43.465" width="82.07">
+                     <color>
+                        <Color red="0.32894736528396606" green="0.2923976480960846" blue="0.2558479607105255" />
+                     </color></InnerShadow>
+               </input>
+               <color>
+                  <Color red="0.38947367668151855" green="0.26224562525749207" blue="0.02596491202712059" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Pane layoutX="512.0" layoutY="351.0" prefHeight="54.0" prefWidth="178.0" styleClass="pane" stylesheets="@../assets/style.css">
+         <children>
+            <Text layoutX="6.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cafelutele mai vechii">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <InnerShadow height="32.7" radius="17.020000000000003" width="37.38" />
+         </effect></Pane>
+      <Pane layoutX="512.0" layoutY="225.0" prefHeight="54.0" prefWidth="178.0" styleClass="pane" stylesheets="@../assets/style.css">
+         <children>
+            <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Despre cafeluta ta">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <InnerShadow height="58.43" radius="24.0375" width="39.72" />
+         </effect></Pane>
+      <Button fx:id="buttonDetails" layoutX="416.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#buttonDetails" prefHeight="96.0" prefWidth="96.0" stylesheets="@../assets/style.css">
+         <styleClass>
+            <String fx:value="button2" />
+            <String fx:value="button" />
+         </styleClass>
+         <effect>
+            <DropShadow height="126.03" radius="66.18" width="140.69">
+               <input>
+                  <InnerShadow height="40.89" radius="44.162499999999994" width="137.76">
+                     <color>
+                        <Color red="0.2368421107530594" green="0.1114766076207161" blue="0.021929824724793434" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="0.31578946113586426" green="0.15979532897472382" blue="0.03216374292969704" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Button layoutX="416.0" layoutY="330.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="96.0" prefWidth="96.0" stylesheets="@../assets/style.css">
+         <styleClass>
+            <String fx:value="button3" />
+            <String fx:value="button" />
+         </styleClass>
+         <effect>
+            <DropShadow height="90.86" radius="27.465">
+               <input>
+                  <InnerShadow height="87.93" radius="41.2675" width="79.14">
+                     <color>
+                        <Color red="0.2763157784938812" green="0.18638522922992706" blue="0.13432016968727112" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="0.2631579041481018" green="0.13537605106830597" blue="0.015838205814361572" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <ImageView id="..\assets\style.css" fitHeight="368.0" fitWidth="276.0" layoutX="102.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" styleClass="background" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="102.0" AnchorPane.topAnchor="79.0">
+         <image>
+            <Image url="@../assets/pozaMeme.jpg" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.31" height="255.0" radius="121.87" width="234.48">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

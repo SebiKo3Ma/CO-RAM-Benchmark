@@ -1,0 +1,39 @@
+.button{
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+
+}
+
+
+
+.button1{
+    -fx-background-image: url(buton1.jpg);
+    -fx-background-radius: 1300px;
+    -fx-background-clip: round;
+
+}
+
+.button2{
+    -fx-background-image: url(buton2.jpg);
+}
+
+.button3{
+    -fx-background-image: url(buton3.jpg);
+}
+
+.background{
+    -fx-background-image: url("cv1.jpg");
+    -fx-background-size: cover;
+   /* -fx-effect: blur(radius 1000px);*/
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+
+}
+
+.sidePhoto{
+    -fx-border-radius: 100px;
+}
+
+.pane{
+    -fx-background-color: #ffd182;
+
+}
