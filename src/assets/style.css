@@ -22,15 +22,25 @@
 }
 
 .background{
-    -fx-background-image: url("cv1.jpg");
-    -fx-background-size: cover;
+    -fx-background-image: url("sideLeftBackground.jpg");
+   -fx-background-size: contain;
    /* -fx-effect: blur(radius 1000px);*/
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 
 }
+.titleBackground{
+    -fx-background-image: url("bannerTopTitle.jpg");
+    -fx-background-size:cover;
+}
+.titleIcon{
+    -fx-backgriund-image: url("TitleIcon.png");
+}
+.sideRightPane{
+    -fx-background-color: #afa08b;
 
-.sidePhoto{
-    -fx-border-radius: 100px;
+}
+.memePoza{
+    -fx-image: url("pozaMeme.jpg");
 }
 
 .pane{
