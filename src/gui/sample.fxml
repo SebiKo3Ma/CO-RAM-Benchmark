@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="525.0" prefWidth="758.0" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller">
    <children>
-      <Pane layoutX="512.0" layoutY="103.0" prefHeight="54.0" prefWidth="178.0" styleClass="pane" stylesheets="@../assets/style.css">
+      <Pane layoutX="512.0" layoutY="103.0" prefHeight="724" prefWidth="781" styleClass="pane" stylesheets="@../assets/style.css">
          <children>
             <Text layoutX="6.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testează-ti cafeluta" textAlignment="CENTER" wrappingWidth="166.400146484375">
                <font>
