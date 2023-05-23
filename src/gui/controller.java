@@ -20,7 +20,6 @@ public class controller{
     private Parent root;
     @FXML
     private AnchorPane ContentPane;
-
     @FXML
     void buttonDetails(MouseEvent event){
         DetailMemorySpaceTestbench detail = new DetailMemorySpaceTestbench();
@@ -28,7 +27,6 @@ public class controller{
     }
     @FXML
     void switchToScene1(MouseEvent event) throws IOException {
-        // Create and load the FXML file for the new scene or page
         FXMLLoader loader = new FXMLLoader(getClass().getResource("stressTest.fxml"));
         Parent scene1Root = loader.load();
 
@@ -38,20 +36,29 @@ public class controller{
 
     @FXML
     void switchToScene2(MouseEvent event) throws IOException{
-        FXMLLoader loader2= new FXMLLoader(getClass().getResource("Details.fxml"));
-        Parent scene2Root = loader2.load();
+        /*Parent root= FXMLLoader.load(getClass().getResource("History.fxml"));
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();*/
+
+        // Create and load the FXML file for the new scene or page
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Details.fxml"));
+        Parent scene2Root = loader.load();
 
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene2Root);
     }
     @FXML
     void switchToScene3(MouseEvent event) throws IOException{
-        FXMLLoader loader3=new FXMLLoader(getClass().getResource("History.fxml"));
-        Parent scene3Root = loader3.load();
+        // Create and load the FXML file for the new scene or page
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("History.fxml"));
+        Parent scene3Root = loader.load();
 
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene3Root);
     }
+
 
 
 }

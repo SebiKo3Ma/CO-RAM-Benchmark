@@ -21,6 +21,7 @@
     -fx-background-image: url(buton3.jpg);
 }
 
+
 .background{
     -fx-background-image: url("sideLeftBackground.jpg");
    -fx-background-size: contain;
@@ -31,6 +32,10 @@
 .titleBackground{
     -fx-background-image: url("bannerTopTitle.jpg");
     -fx-background-size:cover;
+}
+.stressTestBackground{
+    -fx-background-image: url("2Coffes.jpg");
+    -fx-background-size:contain;
 }
 .titleIcon{
     -fx-backgriund-image: url("TitleIcon.png");
@@ -44,6 +49,15 @@
 }
 
 .pane{
-    -fx-background-color: #ffd182;
+    -fx-background-color: #A18270;
+
+}
+.pane2{
+    -fx-background-color: #DBDED7;
+
+}
+.pane3{
+    -fx-background-color: #CDAC87;
+
 
 }
