@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import javafx.collections.FXCollections;
@@ -27,13 +28,13 @@ public class HistoryController implements Initializable{
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private AnchorPane ContentPane;
     @FXML
-    void switchToScene1(MouseEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("sample.fxml"));
-        stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    void switchToScene4(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
+        Parent scene4Root = loader.load();
+        // Set the new scene as the content of the contentPane
+        ContentPane.getChildren().setAll(scene4Root);
     }
 
     @FXML

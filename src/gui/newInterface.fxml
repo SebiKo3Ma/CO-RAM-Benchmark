@@ -15,11 +15,11 @@
 
 <AnchorPane maxHeight="823.0" maxWidth="1145.0" minHeight="823.0" minWidth="1145.0" prefHeight="823.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller">
     <children>
-      <SplitPane dividerPositions="0.13219895287958114" orientation="VERTICAL" prefHeight="823.0" prefWidth="1145.0">
+      <SplitPane dividerPositions="0.13219895287958114" orientation="VERTICAL" prefHeight="823.0" prefWidth="1145.0" styleClass="split-pane-divider" stylesheets="@../assets/style.css">
         <items>
               <AnchorPane prefHeight="74.0" prefWidth="600.0" styleClass="titleBackground" stylesheets="@../assets/style.css" SplitPane.resizableWithParent="false">
                <children>
-                  <ImageView fitHeight="84.0" fitWidth="85.0" layoutX="1026.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="titleIcon">
+                  <ImageView fitHeight="84.0" fitWidth="85.0" layoutX="1051.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="titleIcon">
                      <image>
                         <Image url="@../assets/TitleIcon.png" />
                      </image>
@@ -51,11 +51,12 @@
                         </Glow>
                      </effect>
                   </Text>
+                  <Button layoutX="1064.0" layoutY="14.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="61.0" style="-fx-opacity: 0;" stylesheets="@../assets/style.css" text="Button" />
                </children>
               </AnchorPane>
-              <SplitPane dividerPositions="0.35083114610673666" prefHeight="350.0" prefWidth="600.0">
+              <SplitPane dividerPositions="0.3455818022747157" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #afa08b;" styleClass="split-pane-divider" stylesheets="@../assets/style.css">
                   <items>
-                      <AnchorPane prefHeight="383.0" prefWidth="222.0" styleClass="background" stylesheets="@../assets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" SplitPane.resizableWithParent="false">
+                      <AnchorPane prefHeight="724.0" prefWidth="342.0" styleClass="background" stylesheets="@../assets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" SplitPane.resizableWithParent="false">
                           <children>
                               <Button layoutX="128.0" layoutY="183.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="58.0" prefWidth="237.0" styleClass="pane2" />
                               <Button layoutX="94.0" layoutY="312.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="58.0" prefWidth="271.0" styleClass="pane3" />

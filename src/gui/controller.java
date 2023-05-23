@@ -58,6 +58,14 @@ public class controller{
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene3Root);
     }
+    @FXML
+    void switchToScene4(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("stressTest.fxml"));
+        Parent scene4Root = loader.load();
+
+        // Set the new scene as the content of the contentPane
+        ContentPane.getChildren().setAll(scene4Root);
+    }
 
 
 
