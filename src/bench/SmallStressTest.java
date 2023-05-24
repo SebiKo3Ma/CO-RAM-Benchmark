@@ -3,10 +3,9 @@ import java.util.Random;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
-import java.lang.management.OperatingSystemMXBean;
 
 
-public class SmallStress implements IBenchmark{
+public class SmallStressTest implements IBenchmark{
     long iterations, UsedMemory;
     int byteArray;
 

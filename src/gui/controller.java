@@ -1,17 +1,15 @@
 package gui;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.SplitPane;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import testbench.DetailMemorySpaceTestbench;
 import javafx.scene.control.TextField;
+import testbench.SmallStressBenchmark;
 
 import java.awt.*;
 import java.io.IOException;
@@ -32,7 +30,7 @@ public class controller{
     @FXML
     private void handleStressButton() {
         // Call the TestSmallStress code from the testbench package
-        testbench.TestSmallStress test = new testbench.TestSmallStress();
+        SmallStressBenchmark test = new SmallStressBenchmark();
         test.main(null);
 
         // Get the results from the TestSmallStress instance

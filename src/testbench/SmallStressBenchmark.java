@@ -1,21 +1,19 @@
 package testbench;
 
 import bench.IBenchmark;
-import bench.SmallStress;
+import bench.SmallStressTest;
 import timing.ITimer;
 import timing.TimeConvert;
 import timing.Timer;
 import logging.ConsoleLogger;
 import recordKeeping.ScoreWriter;
 
-import java.sql.Time;
-
-public class TestSmallStress {
+public class SmallStressBenchmark {
     private double score;
     private static long Time;
     public static void main (String [] args){
 
-        IBenchmark bench = new SmallStress();
+        IBenchmark bench = new SmallStressTest();
         ITimer timer = new Timer();
         ConsoleLogger log = new ConsoleLogger();
         TimeConvert newTime = new TimeConvert();
@@ -35,7 +33,7 @@ public class TestSmallStress {
         Time= (long) newTime.convert(finishedTime, "seconds");
 
 
-        writer.initialize("smallStress", (int)((SmallStress) bench).getMemory(), (int) newTime.convert(finishedTime, "seconds"), (int) score/100000);
+        writer.initialize("smallStress", (int)((SmallStressTest) bench).getMemory(), (int) newTime.convert(finishedTime, "seconds"), (int) score/100000);
         writer.run();
 
         log.close();
