@@ -33,6 +33,9 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 
 }
+.detailsBackground{
+    -fx-background-image: url("details.png");
+}
 .titleBackground{
     -fx-background-image: url("bannerTopTitle.jpg");
     -fx-background-size:cover;
@@ -66,8 +69,6 @@
 }
 .pane3{
     -fx-background-color: #CDAC87;
-
-
 }
 .split-pane:horizontal > .split-pane-divider {
     -fx-background-color: #CDAC87;

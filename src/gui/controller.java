@@ -2,16 +2,15 @@ package gui;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import testbench.DetailMemorySpaceTestbench;
+import javafx.scene.control.TextField;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class controller{
@@ -20,6 +19,8 @@ public class controller{
     private Parent root;
     @FXML
     private AnchorPane ContentPane;
+    @FXML
+    private TextField TextField;
     @FXML
     void buttonDetails(MouseEvent event){
         DetailMemorySpaceTestbench detail = new DetailMemorySpaceTestbench();
@@ -65,6 +66,10 @@ public class controller{
 
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene4Root);
+    }
+    @FXML
+    void showTextField(MouseEvent event) throws IOException{
+        TextField.setOpacity(1.0);
     }
 
 
