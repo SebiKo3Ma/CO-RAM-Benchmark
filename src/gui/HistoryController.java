@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -28,7 +29,7 @@ public class HistoryController implements Initializable{
     private Stage stage;
     private Scene scene;
     private Parent root;
-    // private AnchorPane ContentPane;
+     private AnchorPane ContentPane;
 
 
     @FXML
@@ -86,5 +87,32 @@ public class HistoryController implements Initializable{
 
     // add your data here from any source 
     private ObservableList<History> History = FXCollections.observableArrayList();
+
+    @FXML
+    void switchToScene5(MouseEvent event) throws IOException {
+        openGraphsFXML();
+    }
+    public void openGraphsFXML() throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Access the SplitPane with the ID "contentPane"
+            SplitPane contentPane = (SplitPane) root.lookup("#contentPane");
+            if (contentPane != null) {
+                // Add the new content to the SplitPane
+                contentPane.getItems().add(root);
+            }
+
+            // Create a new Stage for the Scene
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+
+    }
 
 }

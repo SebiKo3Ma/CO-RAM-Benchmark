@@ -87,10 +87,7 @@ public class controller{
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene4Root);
     }
-    @FXML
-    void switchToScene5(MouseEvent event) throws IOException {
-        openGraphsFXML();
-    }
+
 
 
    /* @FXML
@@ -99,25 +96,5 @@ public class controller{
     }*/
 
 
-    public void openGraphsFXML() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
-            Parent root = fxmlLoader.load();
 
-            // Access the SplitPane with the ID "contentPane"
-            SplitPane contentPane = (SplitPane) root.lookup("#contentPane");
-            if (contentPane != null) {
-                // Add the new content to the SplitPane
-                contentPane.getItems().add(root);
-            }
-
-            // Create a new Stage for the Scene
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle the exception appropriately
-        }
-    }
 }
