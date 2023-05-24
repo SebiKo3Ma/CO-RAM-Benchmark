@@ -9,6 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import testbench.DetailMemorySpaceTestbench;
 import javafx.scene.control.TextField;
+import testbench.MemoryEaterBenchmark;
 import testbench.SmallStressBenchmark;
 
 import java.awt.*;
@@ -35,12 +36,28 @@ public class controller{
 
         // Get the results from the TestSmallStress instance
         double score = test.getScore();
+
         long time = test.getTime();
+
 
         // Update the text field with the results
         resultTextField.setText("Score: " + score + ", Time: " + time);
 
     }
+    @FXML
+    private void handleMemoryEater() {
+        // Call the TestSmallStress code from the testbench package
+        MemoryEaterBenchmark test = new MemoryEaterBenchmark();
+        test.main(null);
+
+        // Get the results from the TestSmallStress instance
+        double score2 = test.getScore();
+        // Update the text field with the results
+        resultTextField.setText("Score: " + score2);
+
+    }
+
+
 
     @FXML
     void buttonDetails(MouseEvent event){
@@ -51,7 +68,6 @@ public class controller{
     void switchToScene1(MouseEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("stressTest.fxml"));
         Parent scene1Root = loader.load();
-
         // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene1Root);
 }
