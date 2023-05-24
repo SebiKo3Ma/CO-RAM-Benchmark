@@ -44,6 +44,7 @@ public class controller{
         resultTextField.setText("Score: " + score + ", Time: " + time);
 
     }
+
     @FXML
     private void handleMemoryEater() {
         // Call the TestSmallStress code from the testbench package
@@ -56,9 +57,11 @@ public class controller{
         resultTextField.setText("Score: " + score2);
 
     }
-
-
-
+    @FXML
+    private void handleDetailMemorySpaceTestbech(){
+        DetailMemorySpaceTestbench test=new DetailMemorySpaceTestbench();
+        test.main();
+    }
     @FXML
     void buttonDetails(MouseEvent event){
         DetailMemorySpaceTestbench detail = new DetailMemorySpaceTestbench();
