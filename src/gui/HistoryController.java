@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import javafx.collections.FXCollections;
@@ -27,14 +29,8 @@ public class HistoryController implements Initializable{
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    void switchToScene1(MouseEvent event) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("sample.fxml"));
-        stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+     private AnchorPane ContentPane;
+
 
     @FXML
     private TableView<History> tbData;
@@ -91,5 +87,32 @@ public class HistoryController implements Initializable{
 
     // add your data here from any source 
     private ObservableList<History> History = FXCollections.observableArrayList();
+
+    @FXML
+    void switchToScene5(MouseEvent event) throws IOException {
+        openGraphsFXML();
+    }
+    public void openGraphsFXML() throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Access the SplitPane with the ID "contentPane"
+            SplitPane contentPane = (SplitPane) root.lookup("#contentPane");
+            if (contentPane != null) {
+                // Add the new content to the SplitPane
+                contentPane.getItems().add(root);
+            }
+
+            // Create a new Stage for the Scene
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+
+    }
 
 }

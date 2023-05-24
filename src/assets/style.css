@@ -20,20 +20,59 @@
 .button3{
     -fx-background-image: url(buton3.jpg);
 }
+.graphButton{
+    -fx-background-image: url(graphButton.png);
+    -fx-background-size: cover;
+}
+
 
 .background{
-    -fx-background-image: url("cv1.jpg");
-    -fx-background-size: cover;
+    -fx-background-image: url("sideLeftBackground.jpg");
+   -fx-background-size: contain;
    /* -fx-effect: blur(radius 1000px);*/
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 
 }
+.detailsBackground{
+    -fx-background-image: url("details.png");
+}
+.titleBackground{
+    -fx-background-image: url("bannerTopTitle.jpg");
+    -fx-background-size:cover;
+}
+.stressTestBackground{
+    -fx-background-image: url("2Coffes.jpg");
+    -fx-background-size:contain;
+}
+.historyBackground{
+    -fx-background-image: url("historyBackground.jpg");
+    -fx-background-size:cover;
+}
+.titleIcon{
+    -fx-backgriund-image: url("TitleIcon.png");
+}
+.sideRightPane{
+    -fx-background-color: #afa08b;
 
-.sidePhoto{
-    -fx-border-radius: 100px;
+}
+.memePoza{
+    -fx-image: url("pozaMeme.jpg");
 }
 
 .pane{
-    -fx-background-color: #ffd182;
+    -fx-background-color: #A18270;
 
+}
+.pane2{
+    -fx-background-color: #DBDED7;
+
+}
+.pane3{
+    -fx-background-color: #CDAC87;
+}
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: #CDAC87;
+}
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: #917f66;
 }

@@ -9,7 +9,11 @@ import logging.ConsoleLogger;
 import recordKeeping.ScoreWriter;
 
 public class SmallStressBenchmark {
+
+    private double score;
+    private static long Time;
     public static void main (String [] args){
+
         IBenchmark bench = new SmallStressTest();
         ITimer timer = new Timer();
         ConsoleLogger log = new ConsoleLogger();
@@ -17,6 +21,7 @@ public class SmallStressBenchmark {
         ScoreWriter writer = new ScoreWriter();
 
         long iterations = 10;
+
         int byteArray;
 
         byteArray = ((SmallStressTest) bench). readAmountOfMemory();
@@ -35,11 +40,21 @@ public class SmallStressBenchmark {
         log.write("Score: " + score/100000);
         log.write ("Time for running the program: " + newTime.convert(finishedTime, "seconds") + " seconds");
 
+      
+        Time= (long) newTime.convert(finishedTime, "seconds");
+
         writer.initialize("smallStress", (int)((SmallStressTest) bench).getMemory(), (int) newTime.convert(finishedTime, "seconds"), (int) score/100000);
         writer.run();
 
         log.close();
         bench.clean();
 
+    }
+    public double getScore() {
+        return score/100000;
+    }
+
+    public long getTime() {
+        return Time;
     }
 }

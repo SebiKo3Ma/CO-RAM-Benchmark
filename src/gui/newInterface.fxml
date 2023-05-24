@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="823.0" maxWidth="1145.0" minHeight="823.0" minWidth="1145.0" prefHeight="823.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller">
+    <children>
+      <SplitPane dividerPositions="0.13219895287958114" orientation="VERTICAL" prefHeight="823.0" prefWidth="1145.0" styleClass="split-pane-divider" stylesheets="@../assets/style.css">
+        <items>
+              <AnchorPane prefHeight="74.0" prefWidth="600.0" styleClass="titleBackground" stylesheets="@../assets/style.css" SplitPane.resizableWithParent="false">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="85.0" layoutX="1051.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="titleIcon">
+                     <image>
+                        <Image url="@../assets/TitleIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#250e02" layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BENCHMARK CA FETELE" wrappingWidth="502.13671875">
+                     <font>
+                        <Font name="Cooper Black" size="38.0" />
+                     </font>
+                     <effect>
+                        <Glow>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.09210526198148727" green="0.007249025162309408" blue="0.007249025162309408" />
+                                       </color>
+                                    </DropShadow>
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant>
+                                       <color>
+                                          <Color red="0.7631579041481018" green="0.45235949754714966" blue="0.04593079909682274" />
+                                       </color>
+                                    </Light.Distant>
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Glow>
+                     </effect>
+                  </Text>
+                  <Button layoutX="1064.0" layoutY="14.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="61.0" style="-fx-opacity: 0;" stylesheets="@../assets/style.css" text="Button" />
+               </children>
+              </AnchorPane>
+              <SplitPane dividerPositions="0.3455818022747157" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #afa08b;" styleClass="split-pane-divider" stylesheets="@../assets/style.css">
+                  <items>
+                      <AnchorPane prefHeight="724.0" prefWidth="342.0" styleClass="background" stylesheets="@../assets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" SplitPane.resizableWithParent="false">
+                          <children>
+                              <Button layoutX="128.0" layoutY="183.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="58.0" prefWidth="237.0" styleClass="pane2" />
+                              <Button layoutX="94.0" layoutY="312.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="58.0" prefWidth="271.0" styleClass="pane3" />
+                              <Button layoutX="94.0" layoutY="54.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="58.0" prefWidth="271.0" styleClass="pane" stylesheets="@../assets/style.css" />
+                        <Button layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="99.0" prefWidth="101.0" styleClass="button1" stylesheets="@../assets/style.css" />
+                        <Button layoutX="51.0" layoutY="163.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="99.0" prefWidth="101.0" styleClass="button2" stylesheets="@../assets/style.css" />
+                        <Button layoutX="27.0" layoutY="292.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="99.0" prefWidth="101.0" styleClass="button3" stylesheets="@../assets/style.css" />
+                        <Text fill="#dbded7" layoutX="139.0" layoutY="89.0" onMousePressed="#switchToScene1" strokeType="OUTSIDE" strokeWidth="0.0" text="Testează-ti cafeluta" wrappingWidth="196.23046875">
+                           <font>
+                              <Font name="Cooper Black" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.19736842811107635" green="0.19599780440330505" blue="0.19462719559669495" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Text>
+                        <Text fill="#a18270" layoutX="139.0" layoutY="348.0" onMousePressed="#switchToScene3" strokeType="OUTSIDE" strokeWidth="0.0" text="Cafelutele mai vechi" wrappingWidth="215.23046875">
+                           <font>
+                              <Font name="Cooper Black" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="1.0" green="0.957870364189148" blue="0.9351851940155029" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Text>
+                        <Text fill="#cdac87" layoutX="157.0" layoutY="218.0" onMousePressed="#switchToScene2" strokeType="OUTSIDE" strokeWidth="0.0" text="Despre cafeluta ta" wrappingWidth="196.23046875">
+                           <font>
+                              <Font name="Cooper Black" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.19736842811107635" green="0.1480720043182373" blue="0.1215277761220932" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Text>
+                          </children>
+                      </AnchorPane>
+                      <AnchorPane fx:id="ContentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="745.0" styleClass="sideRightPane" stylesheets="@../assets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="724.0" fitWidth="549.0" layoutX="103.0" layoutY="-2.0" pickOnBounds="true" styleClass="memePoza">
+                           <image>
+                              <Image url="@../assets/pozaMeme.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                      </AnchorPane>
+                  </items>
+              </SplitPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>

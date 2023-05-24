@@ -9,11 +9,14 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 public class main extends Application {
-    @Override
+
+   @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root= FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        Parent root= FXMLLoader.load(getClass().getResource("newInterface.fxml"));
         primaryStage.setTitle("Benchmark ca fetele");
         primaryStage.setScene(new Scene(root));
+       primaryStage.setResizable(false);
         primaryStage.show();
     }
     public static void main(String[] args) {
