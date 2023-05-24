@@ -43,6 +43,7 @@ public class controller{
         resultTextField.setText("Score: " + score + ", Time: " + time);
 
     }
+
     @FXML
     void buttonDetails(MouseEvent event){
         DetailMemorySpaceTestbench detail = new DetailMemorySpaceTestbench();
