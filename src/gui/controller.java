@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -40,6 +41,7 @@ public class controller{
 
         // Update the text field with the results
         resultTextField.setText("Score: " + score + ", Time: " + time);
+
     }
     @FXML
     void buttonDetails(MouseEvent event){

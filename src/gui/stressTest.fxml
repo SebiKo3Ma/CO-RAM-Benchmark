@@ -22,7 +22,7 @@
             <Font name="Snap ITC" size="26.0" />
          </font>
       </Text>
-      <TextField fx:id="resultTextField" layoutX="239.0" layoutY="98.0" prefHeight="72.0" prefWidth="267.0" style="-fx-background-color: #d6c89c; -fx-opacity: 60%;">
+      <TextField fx:id="resultTextField" editable="false" layoutX="239.0" layoutY="98.0" prefHeight="72.0" prefWidth="267.0" style="-fx-background-color: #d6c89c; -fx-opacity: 60%;">
          <effect>
             <DropShadow>
                <color>
