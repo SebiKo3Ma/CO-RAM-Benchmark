@@ -1,9 +1,11 @@
 package gui;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -20,7 +22,25 @@ public class controller{
     @FXML
     private AnchorPane ContentPane;
     @FXML
-    private TextField TextField;
+    private Label scoreLabel;
+
+    @FXML
+    private Label timeLabel;
+    @FXML
+    private TextField resultTextField;
+    @FXML
+    private void handleStressButton() {
+        // Call the TestSmallStress code from the testbench package
+        testbench.TestSmallStress test = new testbench.TestSmallStress();
+        test.main(null);
+
+        // Get the results from the TestSmallStress instance
+        double score = test.getScore();
+        long time = test.getTime();
+
+        // Update the text field with the results
+        resultTextField.setText("Score: " + score + ", Time: " + time);
+    }
     @FXML
     void buttonDetails(MouseEvent event){
         DetailMemorySpaceTestbench detail = new DetailMemorySpaceTestbench();
@@ -68,10 +88,36 @@ public class controller{
         ContentPane.getChildren().setAll(scene4Root);
     }
     @FXML
-    void showTextField(MouseEvent event) throws IOException{
-        TextField.setOpacity(1.0);
+    void switchToScene5(MouseEvent event) throws IOException {
+        openGraphsFXML();
     }
 
 
+   /* @FXML
+    void showTextField(MouseEvent event) throws IOException{
+        TextField.setOpacity(1.0);
+    }*/
 
+
+    public void openGraphsFXML() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Access the SplitPane with the ID "contentPane"
+            SplitPane contentPane = (SplitPane) root.lookup("#contentPane");
+            if (contentPane != null) {
+                // Add the new content to the SplitPane
+                contentPane.getItems().add(root);
+            }
+
+            // Create a new Stage for the Scene
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+    }
 }

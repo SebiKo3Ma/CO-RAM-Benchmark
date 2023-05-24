@@ -28,14 +28,8 @@ public class HistoryController implements Initializable{
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private AnchorPane ContentPane;
-    @FXML
-    void switchToScene4(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Graphs.fxml"));
-        Parent scene4Root = loader.load();
-        // Set the new scene as the content of the contentPane
-        ContentPane.getChildren().setAll(scene4Root);
-    }
+    // private AnchorPane ContentPane;
+
 
     @FXML
     private TableView<History> tbData;
