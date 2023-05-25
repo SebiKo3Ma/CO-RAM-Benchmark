@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.DropShadow?>
@@ -51,19 +52,40 @@
                         </Glow>
                      </effect>
                   </Text>
-                  <Button layoutX="1064.0" layoutY="14.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="61.0" style="-fx-opacity: 0;" stylesheets="@../assets/style.css" text="Button" />
+                  <Button layoutX="1064.0" layoutY="14.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="61.0" style="-fx-opacity: 0;" stylesheets="@../assets/style.css" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
               </AnchorPane>
               <SplitPane dividerPositions="0.3455818022747157" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #afa08b;" styleClass="split-pane-divider" stylesheets="@../assets/style.css">
                   <items>
                       <AnchorPane prefHeight="724.0" prefWidth="342.0" styleClass="background" stylesheets="@../assets/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" SplitPane.resizableWithParent="false">
                           <children>
-                              <Button layoutX="128.0" layoutY="183.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="58.0" prefWidth="237.0" styleClass="pane2" />
-                              <Button layoutX="94.0" layoutY="312.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="58.0" prefWidth="271.0" styleClass="pane3" />
-                              <Button layoutX="94.0" layoutY="54.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="58.0" prefWidth="271.0" styleClass="pane" stylesheets="@../assets/style.css" />
-                        <Button layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="99.0" prefWidth="101.0" styleClass="button1" stylesheets="@../assets/style.css" />
-                        <Button layoutX="51.0" layoutY="163.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="99.0" prefWidth="101.0" styleClass="button2" stylesheets="@../assets/style.css" />
-                        <Button layoutX="27.0" layoutY="292.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="99.0" prefWidth="101.0" styleClass="button3" stylesheets="@../assets/style.css" />
+                              <Button layoutX="128.0" layoutY="183.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="58.0" prefWidth="237.0" styleClass="pane2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                              <Button layoutX="94.0" layoutY="312.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="58.0" prefWidth="271.0" styleClass="pane3">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                              <Button layoutX="94.0" layoutY="54.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="58.0" prefWidth="271.0" styleClass="pane" stylesheets="@../assets/style.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onMousePressed="#switchToScene1" prefHeight="99.0" prefWidth="101.0" styleClass="button1" stylesheets="@../assets/style.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="51.0" layoutY="163.0" mnemonicParsing="false" onMousePressed="#switchToScene2" prefHeight="99.0" prefWidth="101.0" styleClass="button2" stylesheets="@../assets/style.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button layoutX="27.0" layoutY="292.0" mnemonicParsing="false" onMousePressed="#switchToScene3" prefHeight="99.0" prefWidth="101.0" styleClass="button3" stylesheets="@../assets/style.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
                         <Text fill="#dbded7" layoutX="139.0" layoutY="89.0" onMousePressed="#switchToScene1" strokeType="OUTSIDE" strokeWidth="0.0" text="Testează-ti cafeluta" wrappingWidth="196.23046875">
                            <font>
                               <Font name="Cooper Black" size="20.0" />
@@ -75,6 +97,9 @@
                                  </color>
                               </DropShadow>
                            </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Text>
                         <Text fill="#a18270" layoutX="139.0" layoutY="348.0" onMousePressed="#switchToScene3" strokeType="OUTSIDE" strokeWidth="0.0" text="Cafelutele mai vechi" wrappingWidth="215.23046875">
                            <font>
@@ -87,6 +112,9 @@
                                  </color>
                               </DropShadow>
                            </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Text>
                         <Text fill="#cdac87" layoutX="157.0" layoutY="218.0" onMousePressed="#switchToScene2" strokeType="OUTSIDE" strokeWidth="0.0" text="Despre cafeluta ta" wrappingWidth="196.23046875">
                            <font>
@@ -99,6 +127,9 @@
                                  </color>
                               </DropShadow>
                            </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Text>
                           </children>
                       </AnchorPane>
