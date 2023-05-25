@@ -11,6 +11,7 @@ import testbench.DetailMemorySpaceTestbench;
 import javafx.scene.control.TextField;
 import testbench.MemoryEaterBenchmark;
 import testbench.SmallStressBenchmark;
+import javafx.scene.control.Button;
 
 import java.awt.*;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class controller{
     private Parent root;
     @FXML
     private AnchorPane ContentPane;
+
     @FXML
     private Label scoreLabel;
 
@@ -28,6 +30,7 @@ public class controller{
     private Label timeLabel;
     @FXML
     private TextField resultTextField;
+
     @FXML
     private void handleStressButton() {
         // Call the TestSmallStress code from the testbench package
@@ -47,6 +50,8 @@ public class controller{
 
     @FXML
     private void handleMemoryEater() {
+
+
         // Call the TestSmallStress code from the testbench package
         MemoryEaterBenchmark test = new MemoryEaterBenchmark();
         test.main(null);
@@ -56,11 +61,20 @@ public class controller{
         // Update the text field with the results
         resultTextField.setText("Score: " + score2);
 
+
     }
     @FXML
-    private void handleDetailMemorySpaceTestbech(){
+     void handleDetailMemorySpaceTestbech(MouseEvent event) throws IOException {
+/*
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Details2.fxml"));
+            Parent scene6Root = loader.load();
+            ContentPane.getChildren().setAll(scene6Root);
+*/
+
         DetailMemorySpaceTestbench test=new DetailMemorySpaceTestbench();
         test.main();
+
+
     }
     @FXML
     void buttonDetails(MouseEvent event){
@@ -77,17 +91,11 @@ public class controller{
 
     @FXML
     void switchToScene2(MouseEvent event) throws IOException{
-        /*Parent root= FXMLLoader.load(getClass().getResource("History.fxml"));
-        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();*/
+
 
         // Create and load the FXML file for the new scene or page
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Details.fxml"));
         Parent scene2Root = loader.load();
-
-        // Set the new scene as the content of the contentPane
         ContentPane.getChildren().setAll(scene2Root);
     }
     @FXML

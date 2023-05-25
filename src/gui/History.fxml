@@ -17,10 +17,10 @@
                      <children>
                         <TableView fx:id="tbData" editable="true" prefHeight="470.0" prefWidth="656.0" style="-fx-background-color: #756e64;">
                            <columns>
-                              <TableColumn fx:id="timestamp" prefWidth="250.0" text="Timestamp" />
-                              <TableColumn fx:id="memoryUsed" prefWidth="150.0" text="Memory used" />
-                              <TableColumn fx:id="runtime" prefWidth="150.0" text="Runtime" />
-                              <TableColumn fx:id="score" prefWidth="102.0" text="Score" />
+                              <TableColumn fx:id="timestamp" prefWidth="250.0" text="Timestamp" style="-fx-background-color:#9a8e7c "/>
+                              <TableColumn fx:id="memoryUsed" prefWidth="150.0" text="Memory used" style="-fx-background-color:#a89173 " />
+                              <TableColumn fx:id="runtime" prefWidth="150.0" text="Runtime" style="-fx-background-color:#9a8e7c " />
+                              <TableColumn fx:id="score" prefWidth="102.0" text="Score" style="-fx-background-color:#a89173 " />
                            </columns>
                         </TableView>
                      </children>
@@ -33,10 +33,10 @@
                      <children>
                         <TableView fx:id="tbData1" editable="true" prefHeight="397.0" prefWidth="655.0" style="-fx-background-color: #985a36;">
                            <columns>
-                              <TableColumn fx:id="timestamp1" prefWidth="250.0" text="Timestamp" />
-                              <TableColumn fx:id="memoryUsed1" prefWidth="150.0" text="Iterations" />
-                              <TableColumn fx:id="runtime1" prefWidth="150.0" text="Runtime" />
-                              <TableColumn fx:id="score1" prefWidth="102.0" text="Score" />
+                              <TableColumn fx:id="timestamp1" prefWidth="250.0" text="Timestamp" style="-fx-background-color: #a1745b;" />
+                              <TableColumn fx:id="memoryUsed1" prefWidth="150.0" text="Iterations" style="-fx-background-color: #9d7862;" />
+                              <TableColumn fx:id="runtime1" prefWidth="150.0" text="Runtime" style="-fx-background-color: #a1745b;" />
+                              <TableColumn fx:id="score1" prefWidth="102.0" text="Score" style="-fx-background-color: #9d7862;" />
                            </columns>
                         </TableView>
                      </children>
