@@ -10,7 +10,7 @@ import timing.Timer;
 
 public class SmallStressTest implements IBenchmark{
     long iterations, UsedMemory, finishedReadingTime;
-    int byteArray;
+    int byteArray, memory;
     MemoryMXBean memoryBean = ManagementFactory.getMemoryMXBean();
     MemoryUsage initialMemoryUsage = memoryBean.getHeapMemoryUsage();
     long initialMemory = initialMemoryUsage.getMax();
@@ -74,7 +74,8 @@ public class SmallStressTest implements IBenchmark{
         System.out.println("Give an amount of memory:");
 
         Scanner scanner = new Scanner(System.in);
-        byteArray = scanner.nextInt() * 1024 * 1024;
+        memory = scanner.nextInt();
+        byteArray = memory * 1024 * 1024;
         boolean flag = true;
 
         if (byteArray > initialMemory) {
@@ -99,6 +100,10 @@ public class SmallStressTest implements IBenchmark{
           
     public void clean(){
         System.gc();
+    }
+
+    public int getReadMemory(){
+        return memory;
     }
 
     public void cancel(){
