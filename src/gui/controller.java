@@ -25,11 +25,13 @@ public class controller{
 
     @FXML
     private Label scoreLabel;
-
+    @FXML
+    private TextField textField;
     @FXML
     private Label timeLabel;
     @FXML
     private TextField resultTextField;
+
 
     @FXML
     private void handleStressButton() {
@@ -73,6 +75,9 @@ public class controller{
 
         DetailMemorySpaceTestbench test=new DetailMemorySpaceTestbench();
         test.main();
+        textField.setOpacity(0.9);
+
+
 
 
     }

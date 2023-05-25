@@ -8,6 +8,7 @@ public class DetailMemorySpaceTestbench{
     public static void main() {
         DetailMemorySpace memorySpace = new DetailMemorySpace();
         memorySpace.printMemoryDetails();
+
     }
 }
 

@@ -29,6 +29,10 @@
     -fx-background-radius: 100 ;
     -fx-background-color: #1c483e;
 }
+.detailsTextField{
+    -fx-opacity: 0;
+    -fx-background-color: #1c483e;
+}
 
 
 .background{

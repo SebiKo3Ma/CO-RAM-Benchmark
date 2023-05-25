@@ -15,4 +15,5 @@ public class DetailMemorySpace {
                 System.out.println("Used Memory: " + usedGB + " GB");
                 System.out.println("Free Memory: " + freeGB + " GB");
         }
+
 }
