@@ -91,8 +91,6 @@ public class controller{
 
     @FXML
     void switchToScene2(MouseEvent event) throws IOException{
-
-
         // Create and load the FXML file for the new scene or page
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Details.fxml"));
         Parent scene2Root = loader.load();
