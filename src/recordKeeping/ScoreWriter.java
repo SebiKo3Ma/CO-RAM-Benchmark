@@ -12,15 +12,15 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 public class ScoreWriter implements IBenchmark {
-    private int Score, runtime, memory;
+    private int Score, field2, field1;
     private String path;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Override
     public void initialize(Object ... params){
         this.path = (String)params[0];
-        this.memory = (Integer)params[1];
-        this.runtime = (Integer)params[2];
+        this.field1 = (Integer)params[1];
+        this.field2 = (Integer)params[2];
         this.Score = (Integer)params[3];
     }
 
@@ -56,7 +56,7 @@ public class ScoreWriter implements IBenchmark {
             FileWriter fileWriter = new FileWriter(filePath,true);
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            fileWriter.write(sdf.format(timestamp) + "," + memory + "," + runtime + "," + Score + "\n");
+            fileWriter.write(sdf.format(timestamp) + "," + field1 + "," + field2 + "," + Score + "\n");
             System.out.println("Successfully wrote in the file.");
             fileWriter.flush();
             fileWriter.close();

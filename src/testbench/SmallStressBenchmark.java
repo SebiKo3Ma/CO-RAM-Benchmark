@@ -43,7 +43,12 @@ public class SmallStressBenchmark {
       
         Time= (long) newTime.convert(finishedTime, "seconds");
 
-        writer.initialize("smallStress", (int)((SmallStressTest) bench).getMemory(), (int) newTime.convert(finishedTime, "seconds"), (int) score/100000);
+        double readSpeed, writeSpeed;
+        readSpeed = ((SmallStressTest) bench).getReadMemory() / newTime.convert(timeForReading, "seconds");
+        writeSpeed = ((SmallStressTest) bench).getReadMemory() / newTime.convert(timeForWriting, "seconds");
+        log.write("Read:" + readSpeed + "Write:" + writeSpeed);
+
+        writer.initialize("smallStress",(int) writeSpeed, (int) readSpeed, (int) score/100000);
         writer.run();
 
         log.close();

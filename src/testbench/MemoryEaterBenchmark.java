@@ -11,6 +11,7 @@ import bench.MemoryEaterTest;
 import recordKeeping.ScoreWriter;
 
 public class MemoryEaterBenchmark {
+    private double Score;
     public static void main(String[] args) {
         ITimer timer = new Timer();
         ILog log = new ConsoleLogger();
@@ -33,6 +34,9 @@ public class MemoryEaterBenchmark {
 
         log.close();
         bench.clean();
+    }
+    public double getScore() {
+        return Score;
     }
 
 }

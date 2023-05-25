@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class fileReader {
 
-    private String path, timestamp, memory, runtime, score;
+    private String path, timestamp, field1, field2, score;
     ObservableList<History> dataList = FXCollections.observableArrayList();
     public void read(Object ... params) {
         path = (String)params[0];
@@ -29,11 +29,11 @@ public class fileReader {
                 }
 
                 timestamp = values[0];
-                memory = values[1];
-                runtime = values[2];
+                field1 = values[1];
+                field2 = values[2];
                 score = values[3];
 
-                History record = new History(timestamp, memory, runtime, score);
+                History record = new History(timestamp, field1, field2, score);
                 dataList.add(0, record);
 
             }

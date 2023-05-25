@@ -3,14 +3,14 @@ package recordKeeping;
 import javafx.beans.property.SimpleStringProperty;
 public class History {
     private SimpleStringProperty timestamp;
-    private SimpleStringProperty memoryUsed;
-    private SimpleStringProperty runtime;
+    private SimpleStringProperty field1;
+    private SimpleStringProperty field2;
     private SimpleStringProperty score;
 
-    public History(String timestamp, String memoryUsed, String runtime, String score) {
+    public History(String timestamp, String field1, String field2, String score) {
         this.timestamp = new SimpleStringProperty(timestamp);
-        this.memoryUsed = new SimpleStringProperty(memoryUsed);
-        this.runtime = new SimpleStringProperty(runtime);
+        this.field1 = new SimpleStringProperty(field1);
+        this.field2 = new SimpleStringProperty(field2);
         this.score = new SimpleStringProperty(score);
     }
 
@@ -22,20 +22,20 @@ public class History {
         this.timestamp = new SimpleStringProperty(timestamp);
     }
 
-    public String getMemoryUsed() {
-        return memoryUsed.get();
+    public String getField1() {
+        return field1.get();
     }
 
-    public void setMemoryUsed(String memoryUsed) {
-        this.memoryUsed = new SimpleStringProperty(memoryUsed);
+    public void setField1(String field1) {
+        this.field1 = new SimpleStringProperty(field1);
     }
 
-    public String getRuntime() {
-        return runtime.get();
+    public String getField2() {
+        return field2.get();
     }
 
-    public void setRuntime(String runtime) {
-        this.runtime = new SimpleStringProperty(runtime);
+    public void setField2(String field2) {
+        this.field2 = new SimpleStringProperty(field2);
     }
 
     public String getScore() {

@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="724" prefWidth="745" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="724" maxWidth="745" minHeight="724" minWidth="745" prefHeight="724" prefWidth="745" styleClass="graphBackground" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="303.0" layoutY="300.0" mnemonicParsing="false" text="Button" />
+      <LineChart layoutX="15.0" layoutY="235.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: #937754;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" style="-fx-background-color:#937754; " />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="0.9166666865348816" blue="0.7916666865348816" />
+               </color>
+            </DropShadow>
+         </effect>
+      </LineChart>
+      <LineChart layoutX="413.0" layoutY="38.0" prefHeight="297.0" prefWidth="301.0" style="-fx-background-color: #FCD9AA;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.2763157784938812" green="0.16229288280010223" blue="0.03198099508881569" />
+               </color>
+            </DropShadow>
+         </effect>
+      </LineChart>
    </children>
 </AnchorPane>

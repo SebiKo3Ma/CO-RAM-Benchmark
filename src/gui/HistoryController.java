@@ -38,10 +38,10 @@ public class HistoryController implements Initializable{
     public TableColumn<History, String> timestamp;
 
     @FXML
-    public TableColumn<History, String> memoryUsed;
+    public TableColumn<History, String> field1;
 
     @FXML
-    public TableColumn<History, String> runtime;
+    public TableColumn<History, String> field2;
 
     @FXML
     public TableColumn<History, String> score;
@@ -52,10 +52,10 @@ public class HistoryController implements Initializable{
     public TableColumn<History, String> timestamp1;
 
     @FXML
-    public TableColumn<History, String> memoryUsed1;
+    public TableColumn<History, String> field11;
 
     @FXML
-    public TableColumn<History, String> runtime1;
+    public TableColumn<History, String> field21;
 
     @FXML
     public TableColumn<History, String> score1;
@@ -65,8 +65,8 @@ public class HistoryController implements Initializable{
 
         //make sure the property value factory should be exactly same as the e.g. getStudentId from your model class
         timestamp.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
-        memoryUsed.setCellValueFactory(new PropertyValueFactory<>("memoryUsed"));
-        runtime.setCellValueFactory(new PropertyValueFactory<>("runtime"));
+        field1.setCellValueFactory(new PropertyValueFactory<>("field1"));
+        field2.setCellValueFactory(new PropertyValueFactory<>("field2"));
         score.setCellValueFactory(new PropertyValueFactory<>("score"));
 
         //add your data to the table here.
@@ -76,8 +76,8 @@ public class HistoryController implements Initializable{
 
 
         timestamp1.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
-        memoryUsed1.setCellValueFactory(new PropertyValueFactory<>("memoryUsed"));
-        runtime1.setCellValueFactory(new PropertyValueFactory<>("runtime"));
+        field11.setCellValueFactory(new PropertyValueFactory<>("field1"));
+        field21.setCellValueFactory(new PropertyValueFactory<>("field2"));
         score1.setCellValueFactory(new PropertyValueFactory<>("score"));
 
         fileReader reader1 = new fileReader();

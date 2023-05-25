@@ -16,7 +16,7 @@ public class main extends Application {
         Parent root= FXMLLoader.load(getClass().getResource("newInterface.fxml"));
         primaryStage.setTitle("Benchmark ca fetele");
         primaryStage.setScene(new Scene(root));
-       primaryStage.setResizable(false);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
     public static void main(String[] args) {
