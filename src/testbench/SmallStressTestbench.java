@@ -8,11 +8,13 @@ import timing.Timer;
 import logging.ConsoleLogger;
 import recordKeeping.ScoreWriter;
 
-public class SmallStressTestBench {
+public class SmallStressTestbench {
 
-    private double score;
+    private static double score;
 
     private static long Time;
+
+    private static double readSpeed, writeSpeed;
     public static void main (String [] args){
 
         IBenchmark bench = new SmallStressTest();
@@ -29,7 +31,8 @@ public class SmallStressTestBench {
         timer.start();
         bench.run(iterations, byteArray);
         long finishedTime = timer.stop();
-        double score = (iterations/ (newTime.convert(finishedTime, "seconds"))) * byteArray;
+        score = (iterations/ (newTime.convert(finishedTime, "seconds"))) * byteArray;
+
 
         long timeForReading = ((SmallStressTest) bench). readingTime();
         long timeForWriting = ((SmallStressTest) bench).writingTime();
@@ -39,7 +42,7 @@ public class SmallStressTestBench {
       
         Time = (long) newTime.convert(finishedTime, "seconds");
 
-        double readSpeed, writeSpeed;
+
         System.gc();
 
         readSpeed = ((SmallStressTest) bench).getReadMemory() / newTime.convert(timeForReading, "seconds");
@@ -52,11 +55,16 @@ public class SmallStressTestBench {
         log.close();
 
     }
-    public double getScore() {
-        return score/100000;
+    public int getScore() {
+        return (int) score/100000;
     }
 
-    public long getTime() {
-        return Time;
+    public int getReadSpeed() {
+        return (int) readSpeed;
     }
+
+    public int getWriteSpeed() {
+        return (int) writeSpeed;
+    }
+
 }

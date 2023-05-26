@@ -11,7 +11,11 @@ import bench.MemoryEaterTest;
 import recordKeeping.ScoreWriter;
 
 public class MemoryEaterTestbench {
-    private double Score;
+    private static double Score;
+
+    private static long runTime;
+
+    private static int count;
     public static void main(String[] args) {
         ITimer timer = new Timer();
         ILog log = new ConsoleLogger();
@@ -22,11 +26,12 @@ public class MemoryEaterTestbench {
         timer.start();
         bench.run();
         long time = timer.stop();
+        runTime = (int) newTime.convert(time, "seconds");
 
         log.write("Finished in " + newTime.convert(time, "seconds") +" seconds");
 
-        int count = ((MemoryEaterTest) bench).getIterations();
-        double Score = (count / newTime.convert(time, "seconds")) * 4*1048576;
+        count = ((MemoryEaterTest) bench).getIterations();
+         Score = (count / newTime.convert(time, "seconds")) * 4*1048576;
 
 
         writer.initialize("memoryEater", count, (int) newTime.convert(time, "seconds"), (int) Score/100000);
@@ -35,9 +40,13 @@ public class MemoryEaterTestbench {
         log.close();
         bench.clean();
     }
-    public double getScore() {
-        return Score;
+    public int getScore() {
+        return (int) Score/100000;
     }
+
+    public int getRuntime(){return (int) runTime;}
+
+    public int getIterations(){return count;}
 
 }
 

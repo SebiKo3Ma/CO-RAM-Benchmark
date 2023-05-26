@@ -9,8 +9,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import testbench.DetailMemorySpaceTestbench;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import testbench.MemoryEaterTestbench;
-import testbench.SmallStressTestBench;
+import testbench.SmallStressTestbench;
 
 import java.awt.*;
 import java.io.IOException;
@@ -35,25 +36,25 @@ public class controller{
     private TextField textField4;
     @FXML
     private Label timeLabel;
+
     @FXML
-    private TextField resultTextField;
+    private TextArea resultTextField;
 
 
     @FXML
     private void handleStressButton() {
         // Call the TestSmallStress code from the testbench package
-        SmallStressTestBench test = new SmallStressTestBench();
+        SmallStressTestbench test = new SmallStressTestbench();
         test.main(null);
 
         // Get the results from the TestSmallStress instance
-        double score = test.getScore();
-
-        long time = test.getTime();
+        int score = test.getScore();
+        int readSpeed = test.getReadSpeed();
+        int writeSpeed = test.getWriteSpeed();
 
 
         // Update the text field with the results
-        resultTextField.setText("Score: " + score + ", Time: " + time);
-
+        resultTextField.setText("\nWriting speed: " + writeSpeed + " MB/s\nReading Speed: " + readSpeed + " MB/s\nScore: " + score);
     }
 
     @FXML
@@ -65,9 +66,11 @@ public class controller{
         test.main(null);
 
         // Get the results from the TestSmallStress instance
-        double score2 = test.getScore();
+        int score2 = test.getScore();
+        int iterations = test.getIterations();
+        int runtime = test.getRuntime();
         // Update the text field with the results
-        resultTextField.setText("Score: " + score2);
+        resultTextField.setText("\nIterations: " + iterations + "\nRuntime: " + runtime + "s\nScore: " + score2);
 
 
     }
