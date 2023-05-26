@@ -25,8 +25,15 @@ public class controller{
 
     @FXML
     private Label scoreLabel;
+
     @FXML
-    private TextField textField;
+    private TextField textField1;
+    @FXML
+    private TextField textField2;
+    @FXML
+    private TextField textField3;
+    @FXML
+    private TextField textField4;
     @FXML
     private Label timeLabel;
     @FXML
@@ -67,16 +74,28 @@ public class controller{
     }
     @FXML
      void handleDetailMemorySpaceTestbech(MouseEvent event) throws IOException {
-/*
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Details2.fxml"));
-            Parent scene6Root = loader.load();
-            ContentPane.getChildren().setAll(scene6Root);
-*/
+
+        String textColor = "-fx-text-fill: #edd4ab";
+        textField1.setOpacity(0.7);
+        textField1.setStyle(textColor);
+        textField2.setOpacity(0.7);
+        textField2.setStyle(textColor);
+        textField3.setOpacity(0.7);
+        textField3.setStyle(textColor);
+        textField4.setOpacity(0.7);
+        textField4.setStyle(textColor);
+
 
         DetailMemorySpaceTestbench test=new DetailMemorySpaceTestbench();
         test.main();
-        textField.setOpacity(0.9);
 
+
+        double UsedGB=test.getUsedGB();
+        double FreeGB=test.getFreeGB();
+        double TotalGB= test.getTotalGB();
+        textField1.setText("Free Memory: "+ FreeGB);
+        textField2.setText("Used Memory: "+ UsedGB);
+        textField3.setText("Total memory: "+TotalGB);
 
 
 
