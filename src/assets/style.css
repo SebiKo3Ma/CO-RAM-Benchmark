@@ -24,6 +24,15 @@
     -fx-background-image: url(graphButton.png);
     -fx-background-size: cover;
 }
+.detailsButton{
+    -fx-opacity: 0.5;
+    -fx-background-radius: 100 ;
+    -fx-background-color: #1c483e;
+}
+.detailsTextField{
+    -fx-opacity: 0;
+    -fx-background-color: #1c483e;
+}
 
 
 .background{
