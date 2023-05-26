@@ -11,6 +11,8 @@ public class fileReader {
 
     private String path, timestamp, field1, field2, score;
     ObservableList<History> dataList = FXCollections.observableArrayList();
+
+    private int[] scoreList = new int[20];
     public void read(Object ... params) {
         path = (String)params[0];
         String file = System.getProperty("user.home") + "/Documents/CoffeeBenchmarkFiles/" + path + ".txt";
@@ -44,5 +46,17 @@ public class fileReader {
 
     public ObservableList<History> getList(){
         return dataList;
+    }
+
+    public int[] getScores(){
+        for(int i = 0; i < 10; i++) {
+            try {
+                Integer number = Integer.valueOf(dataList.get(i).getScore());
+                scoreList[i] = number;
+            } catch (NumberFormatException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return scoreList;
     }
 }
