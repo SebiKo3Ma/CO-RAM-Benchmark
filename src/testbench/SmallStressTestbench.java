@@ -15,7 +15,7 @@ public class SmallStressTestbench {
     private static long Time;
 
     private static double readSpeed, writeSpeed;
-    public static void main (String [] args){
+    public static void main (Integer [] args){
 
         IBenchmark bench = new SmallStressTest();
         ITimer timer = new Timer();
@@ -26,7 +26,7 @@ public class SmallStressTestbench {
         long iterations = 10;
         int byteArray;
 
-        byteArray = ((SmallStressTest) bench). readAmountOfMemory();
+        byteArray = ((SmallStressTest) bench). readAmountOfMemory(args[0]);
 
         timer.start();
         bench.run(iterations, byteArray);

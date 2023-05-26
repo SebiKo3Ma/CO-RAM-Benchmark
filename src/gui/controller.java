@@ -15,6 +15,7 @@ import testbench.SmallStressTestbench;
 
 import java.awt.*;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class controller{
     private Stage stage;
@@ -40,12 +41,25 @@ public class controller{
     @FXML
     private TextArea resultTextField;
 
+    @FXML
+    private TextField resultTextField1;
+
+    private int memory;
+
 
     @FXML
     private void handleStressButton() {
+        try {
+            memory = Integer.valueOf(resultTextField1.getText());
+            System.out.println(memory);
+        } catch (NumberFormatException ex) {
+            ex.printStackTrace();
+        }
         // Call the TestSmallStress code from the testbench package
         SmallStressTestbench test = new SmallStressTestbench();
-        test.main(null);
+        Integer[] args = new Integer[2];
+        args[0] = memory;
+        test.main(args);
 
         // Get the results from the TestSmallStress instance
         int score = test.getScore();
@@ -74,6 +88,7 @@ public class controller{
 
 
     }
+
     @FXML
      void handleDetailMemorySpaceTestbech(MouseEvent event) throws IOException {
 
@@ -91,13 +106,13 @@ public class controller{
         DetailMemorySpaceTestbench test=new DetailMemorySpaceTestbench();
         test.main();
 
-
+        final DecimalFormat df = new DecimalFormat("0.00");
         double UsedGB=test.getUsedGB();
         double FreeGB=test.getFreeGB();
         double TotalGB= test.getTotalGB();
-        textField1.setText("Free Memory: "+ FreeGB);
-        textField2.setText("Used Memory: "+ UsedGB);
-        textField3.setText("Total memory: "+TotalGB);
+        textField1.setText("Free Memory: "+ df.format(FreeGB) + " GB");
+        textField2.setText("Used Memory: "+ df.format(UsedGB) + " GB");
+        textField3.setText("Total memory: "+df.format(TotalGB) + " GB");
 
 
 

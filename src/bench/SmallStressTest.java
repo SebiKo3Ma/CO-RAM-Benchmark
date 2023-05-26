@@ -88,12 +88,11 @@ public class SmallStressTest implements IBenchmark{
     }
 
 
-    public int readAmountOfMemory (){
+    public int readAmountOfMemory (int mem){
         System.out.println ("Initial allocated memory: " + initialMemory/(1024 * 1024) + " MB");
-        System.out.println("Give an amount of memory:");
+        System.out.println("Give an amount of memory:" + mem);
 
-        Scanner scanner = new Scanner(System.in);
-        memory = scanner.nextInt();
+        memory = mem;
         byteArray = memory * 1024 * 1024;
         boolean flag = true;
 
@@ -105,7 +104,7 @@ public class SmallStressTest implements IBenchmark{
 
         while (!flag) {
             byteArray = 0;
-            byteArray = scanner.nextInt() * (1024 * 1024);
+            byteArray = mem * (1024 * 1024);
             if (byteArray < initialMemory) {
                 flag = true;
             }

@@ -46,7 +46,7 @@
             <Font size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="resultTextField1" editable="false" layoutX="196.0" layoutY="485.0" prefHeight="28.0" prefWidth="151.0" style="-fx-background-color: #d6c89c; -fx-opacity: 60%;">
+      <TextField fx:id="resultTextField1" layoutX="196.0" layoutY="485.0" prefHeight="28.0" prefWidth="151.0" style="-fx-background-color: #d6c89c; -fx-opacity: 60%;" text="200">
          <effect>
             <DropShadow>
                <color>
