@@ -8,7 +8,7 @@ import timing.Timer;
 import logging.ConsoleLogger;
 import recordKeeping.ScoreWriter;
 
-public class SmallStressBenchmark {
+public class SmallStressTestBench {
 
     private double score;
 

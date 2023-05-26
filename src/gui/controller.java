@@ -9,9 +9,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import testbench.DetailMemorySpaceTestbench;
 import javafx.scene.control.TextField;
-import testbench.MemoryEaterBenchmark;
-import testbench.SmallStressBenchmark;
-import javafx.scene.control.Button;
+import testbench.MemoryEaterTestbench;
+import testbench.SmallStressTestBench;
 
 import java.awt.*;
 import java.io.IOException;
@@ -43,7 +42,7 @@ public class controller{
     @FXML
     private void handleStressButton() {
         // Call the TestSmallStress code from the testbench package
-        SmallStressBenchmark test = new SmallStressBenchmark();
+        SmallStressTestBench test = new SmallStressTestBench();
         test.main(null);
 
         // Get the results from the TestSmallStress instance
@@ -62,7 +61,7 @@ public class controller{
 
 
         // Call the TestSmallStress code from the testbench package
-        MemoryEaterBenchmark test = new MemoryEaterBenchmark();
+        MemoryEaterTestbench test = new MemoryEaterTestbench();
         test.main(null);
 
         // Get the results from the TestSmallStress instance

@@ -10,7 +10,7 @@ import bench.IBenchmark;
 import bench.MemoryEaterTest;
 import recordKeeping.ScoreWriter;
 
-public class MemoryEaterBenchmark {
+public class MemoryEaterTestbench {
     private double Score;
     public static void main(String[] args) {
         ITimer timer = new Timer();
