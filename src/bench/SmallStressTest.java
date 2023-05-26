@@ -25,7 +25,6 @@ public class SmallStressTest implements IBenchmark{
         System.gc();
         iterations = (long)options[0];
 
-
         Random random = new Random();
         byte[] array = new byte[byteArray];
         byte[] result = new byte[byteArray];
@@ -48,26 +47,46 @@ public class SmallStressTest implements IBenchmark{
     }
 
     public long writingTime(){
-        byte[] array = new byte[byteArray];
+        long totalTime = 0;
+        int numIterations = 5;
         ITimer timer = new Timer();
-        timer.start();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = 1;
+        for (int j = 0; j < numIterations; j++) {
+            timer.start();
+            byte[] array = new byte[byteArray];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = 1;
+            }
+            long finishedWritingTime = timer.stop();
+            long iterationTime = timer.stop();
+            totalTime += iterationTime;
         }
-        long finishedWritingTime = timer.stop();
-        return finishedWritingTime;
+        long averageWritingTime = totalTime / numIterations;
+
+        return averageWritingTime;
+
     }
 
-    public long readingTime(){
-        byte[] array = new byte[byteArray];
+    public long readingTime() {
+        long totalTime = 0;
+        int numIterations = 5;
         ITimer timer = new Timer();
-        timer.start();
-        for (int i = 0; i < array.length; i++){
-            byte element = array[i];
+
+        for (int j = 0; j < numIterations; j++) {
+            timer.start();
+            byte[] array = new byte[byteArray];
+
+            for (int i = 0; i < array.length; i++) {
+                byte element = array[i];
+            }
+
+            long iterationTime = timer.stop();
+            totalTime += iterationTime;
         }
-        finishedReadingTime = timer.stop();
-        return finishedReadingTime;
+        long averageReadingTime = totalTime / numIterations;
+
+        return averageReadingTime;
     }
+
 
     public int readAmountOfMemory (){
         System.out.println ("Initial allocated memory: " + initialMemory/(1024 * 1024) + " MB");
@@ -99,7 +118,6 @@ public class SmallStressTest implements IBenchmark{
     }
           
     public void clean(){
-        System.gc();
     }
 
     public int getReadMemory(){

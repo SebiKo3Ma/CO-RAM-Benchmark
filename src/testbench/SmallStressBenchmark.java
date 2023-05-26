@@ -11,6 +11,7 @@ import recordKeeping.ScoreWriter;
 public class SmallStressBenchmark {
 
     private double score;
+
     private static long Time;
     public static void main (String [] args){
 
@@ -21,38 +22,34 @@ public class SmallStressBenchmark {
         ScoreWriter writer = new ScoreWriter();
 
         long iterations = 10;
-
         int byteArray;
 
         byteArray = ((SmallStressTest) bench). readAmountOfMemory();
-        long timeForReading = ((SmallStressTest) bench). readingTime();
-        log.write("Time for reading: " + newTime.convert(timeForReading, "miliseconds") + " miliseconds");
-
-
-        long timeForWriting = ((SmallStressTest) bench).writingTime();
-        log.write("Time for writing: " + newTime.convert(timeForWriting, "miliseconds") + " miliseconds");
 
         timer.start();
         bench.run(iterations, byteArray);
         long finishedTime = timer.stop();
         double score = (iterations/ (newTime.convert(finishedTime, "seconds"))) * byteArray;
 
+        long timeForReading = ((SmallStressTest) bench). readingTime();
+        long timeForWriting = ((SmallStressTest) bench).writingTime();
+
         log.write("Score: " + score/100000);
         log.write ("Time for running the program: " + newTime.convert(finishedTime, "seconds") + " seconds");
-
       
-        Time= (long) newTime.convert(finishedTime, "seconds");
+        Time = (long) newTime.convert(finishedTime, "seconds");
 
         double readSpeed, writeSpeed;
+        System.gc();
+
         readSpeed = ((SmallStressTest) bench).getReadMemory() / newTime.convert(timeForReading, "seconds");
         writeSpeed = ((SmallStressTest) bench).getReadMemory() / newTime.convert(timeForWriting, "seconds");
-        log.write("Read:" + readSpeed + "Write:" + writeSpeed);
+        log.write("Read:" + readSpeed + " MB/s\n" + "Write:" + writeSpeed + " MB/s");
 
         writer.initialize("smallStress",(int) writeSpeed, (int) readSpeed, (int) score/100000);
         writer.run();
 
         log.close();
-        bench.clean();
 
     }
     public double getScore() {
