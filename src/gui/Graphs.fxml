@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane maxHeight="724" maxWidth="745" minHeight="724" minWidth="745" prefHeight="724" prefWidth="745" styleClass="graphBackground" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="724" maxWidth="745" minHeight="724" minWidth="745" prefHeight="724" prefWidth="745" styleClass="graphBackground" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GraphController">
    <children>
-      <LineChart layoutX="15.0" layoutY="235.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: #937754;">
+      <LineChart fx:id="chart1" layoutX="15.0" layoutY="235.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: #937754;">
         <xAxis>
-          <CategoryAxis side="BOTTOM" style="-fx-background-color:#937754; " />
+          <NumberAxis side="BOTTOM" style="-fx-background-color:#937754; " />
         </xAxis>
         <yAxis>
           <NumberAxis side="LEFT" />
@@ -24,9 +23,9 @@
             </DropShadow>
          </effect>
       </LineChart>
-      <LineChart layoutX="413.0" layoutY="38.0" prefHeight="297.0" prefWidth="301.0" style="-fx-background-color: #FCD9AA;">
+      <LineChart fx:id="chart2" layoutX="413.0" layoutY="38.0" prefHeight="297.0" prefWidth="301.0" style="-fx-background-color: #FCD9AA;">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <NumberAxis side="BOTTOM" />
         </xAxis>
         <yAxis>
           <NumberAxis side="LEFT" />
