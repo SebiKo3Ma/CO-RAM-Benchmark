@@ -16,7 +16,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="657.0">
                      <children>
-                        <TableView fx:id="tbData" editable="true" prefHeight="470.0" prefWidth="656.0" style="-fx-background-color: #756e64;">
+                        <TableView fx:id="tbData" editable="true" prefHeight="397.0" prefWidth="656.0" style="-fx-background-color: #756e64;">
                            <columns>
                               <TableColumn fx:id="timestamp" prefWidth="250.0" resizable="false" style="-fx-background-color:#9a8e7c " text="Timestamp" />
                               <TableColumn fx:id="field1" prefWidth="150.0" resizable="false" style="-fx-background-color:#a89173 " text="Writing Speed (MB/s)" />
